@@ -55,8 +55,8 @@
             transform: translateY(0);
         }
         .hero-bg {
-            /* A imagem de fundo foi atualizada para o caminho local */
-            background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('imagens/background.jpg');
+            /* A opacidade da camada azul foi reduzida para a imagem aparecer mais */
+            background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('imagens/background.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -94,7 +94,8 @@
     <main>
         <!-- Seção Hero -->
         <section class="hero-bg text-white">
-            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+            <!-- A altura da seção foi aumentada para a imagem ficar maior -->
+            <div class="container mx-auto px-6 py-32 md:py-48 text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight" style="font-family: 'Poppins', sans-serif;">Soluções Inovadoras em Engenharia Ambiental</h1>
                 <p class="text-base sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">Promovendo o desenvolvimento sustentável com responsabilidade e excelência técnica.</p>
                 <a href="#contato" class="bg-proambe-gold text-proambe-blue font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">Fale com um Especialista</a>
