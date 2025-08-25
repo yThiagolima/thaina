@@ -106,8 +106,13 @@
     <!-- Cabeçalho e Navegação -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#">
-                <img id="logo-img" src="imagens/logo.png" alt="PROAMBE Engenharia Logo" class="h-14 transition-all duration-300">
+            <a href="#" class="h-14 flex items-center">
+                <!-- Logo em Texto (visível no topo) -->
+                <div id="logo-text" class="text-2xl font-bold text-white" style="font-family: 'Poppins', sans-serif;">
+                    PROAMBE <span class="text-yellow-300">Engenharia</span>
+                </div>
+                <!-- Logo em Imagem (oculta no topo) -->
+                <img id="logo-img" src="imagens/logo.png" alt="PROAMBE Engenharia Logo" class="h-14 transition-all duration-300 hidden">
             </a>
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#sobre" class="nav-link text-white hover:text-yellow-300 font-medium transition">Sobre</a>
@@ -354,6 +359,8 @@
 
     <script>
         const header = document.getElementById('header');
+        const logoText = document.getElementById('logo-text');
+        const logoImg = document.getElementById('logo-img');
         const navLinks = document.querySelectorAll('.nav-link');
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -365,6 +372,8 @@
                 header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
                 menuBtn.classList.remove('text-white');
                 menuBtn.classList.add('text-gray-800');
+                logoText.classList.add('hidden');
+                logoImg.classList.remove('hidden');
                 navLinks.forEach(link => {
                     link.classList.remove('text-white');
                     link.classList.add('text-gray-800');
@@ -373,6 +382,8 @@
                 header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
                 menuBtn.classList.add('text-white');
                 menuBtn.classList.remove('text-gray-800');
+                logoText.classList.remove('hidden');
+                logoImg.classList.add('hidden');
                  navLinks.forEach(link => {
                     link.classList.add('text-white');
                     link.classList.remove('text-gray-800');
