@@ -105,14 +105,14 @@
 
     <!-- Cabeçalho e Navegação -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div id="logo-text" class="text-xl sm:text-2xl font-bold text-white" style="font-family: 'Poppins', sans-serif;">
-                PROAMBE <span id="logo-span" class="text-yellow-300">Engenharia</span>
-            </div>
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <img id="logo-img" src="imagens/logo.png" alt="PROAMBE Engenharia Logo" class="h-14 transition-all duration-300">
+            </a>
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#sobre" class="text-white hover:text-yellow-300 font-medium transition">Sobre</a>
-                <a href="#servicos" class="text-white hover:text-yellow-300 font-medium transition">Serviços</a>
-                <a href="#diferenciais" class="text-white hover:text-yellow-300 font-medium transition">Diferenciais</a>
+                <a href="#sobre" class="nav-link text-white hover:text-yellow-300 font-medium transition">Sobre</a>
+                <a href="#servicos" class="nav-link text-white hover:text-yellow-300 font-medium transition">Serviços</a>
+                <a href="#diferenciais" class="nav-link text-white hover:text-yellow-300 font-medium transition">Diferenciais</a>
                 <a href="#contato" class="bg-gradient-accent text-gray-900 font-bold py-2 px-5 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">Contato</a>
             </div>
             <div class="md:hidden">
@@ -122,11 +122,11 @@
             </div>
         </nav>
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 rounded-lg shadow-xl">
-            <a href="#sobre" class="mobile-menu-link block py-3 px-5 text-gray-700 hover:bg-gray-100">Sobre</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 rounded-lg shadow-xl mx-6">
+            <a href="#sobre" class="mobile-menu-link block py-3 px-5 text-gray-700 hover:bg-gray-100 rounded-t-lg">Sobre</a>
             <a href="#servicos" class="mobile-menu-link block py-3 px-5 text-gray-700 hover:bg-gray-100">Serviços</a>
             <a href="#diferenciais" class="mobile-menu-link block py-3 px-5 text-gray-700 hover:bg-gray-100">Diferenciais</a>
-            <a href="#contato" class="mobile-menu-link block py-3 px-5 text-gray-700 hover:bg-gray-100">Contato</a>
+            <a href="#contato" class="mobile-menu-link block py-3 px-5 text-gray-700 hover:bg-gray-100 rounded-b-lg">Contato</a>
         </div>
     </header>
 
@@ -269,13 +269,14 @@
                 </div>
                 <div class="relative overflow-hidden group">
                     <div class="flex animate-marquee group-hover:pause">
-                        <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=SSA" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
+                        <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="imagens/cliente1.png" alt="Logo de Cliente" class="max-h-12 opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                         <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=Pif+Paf" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                         <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=TriPlus" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                         <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=Reinil" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                         <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=Arte+Farma" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                         <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=Ouro+Branco" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
-                        <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=SSA" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
+                        <!-- Duplicado para efeito de marquee -->
+                        <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="imagens/cliente1.png" alt="Logo de Cliente" class="max-h-12 opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                         <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center"><img src="https://placehold.co/150x80/9CA3AF/FFFFFF?text=Pif+Paf" alt="Logo" class="max-h-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"></div>
                     </div>
                 </div>
@@ -353,8 +354,7 @@
 
     <script>
         const header = document.getElementById('header');
-        const logoText = document.getElementById('logo-text');
-        const logoSpan = document.getElementById('logo-span');
+        const navLinks = document.querySelectorAll('.nav-link');
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
@@ -363,21 +363,20 @@
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
-                logoText.classList.remove('text-white');
-                logoText.classList.add('text-proambe-blue');
-                logoSpan.classList.remove('text-yellow-300');
-                logoSpan.classList.add('text-proambe-gold');
                 menuBtn.classList.remove('text-white');
                 menuBtn.classList.add('text-gray-800');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
             } else {
                 header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
-                logoText.classList.add('text-white');
-                logoText.classList.remove('text-proambe-blue');
-                // CORREÇÃO APLICADA AQUI
-                logoSpan.classList.add('text-yellow-300');
-                logoSpan.classList.remove('text-proambe-gold');
                 menuBtn.classList.add('text-white');
                 menuBtn.classList.remove('text-gray-800');
+                 navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
             }
         });
 
